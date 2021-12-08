@@ -1,38 +1,176 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
 .App {
-  text-align: center;
+  background: rgb(233, 233, 233);
+  height: 100vh;
+}
+.container {
+  width: 100%;
+  height: 100vh;
+  overflow: auto;
+}
+.max-width {
+  max-width: 900px;
+  margin: auto;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.Post-form {
+  padding: 50px 10px;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.Post-form .max-width {
+  width: 100%;
+  height: auto;
+  background: #fff;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.Post-form h1 {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+}
+.form {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  padding: 20px;
+}
+.Post-form .form input, textarea {
+  display: inline-block;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+}
+.Post-form .form input {
+  width: 100%;
+  height: auto;
+  font-size: 1.5rem;
+  margin: 10px;
+  padding: 10px;
+  background: rgb(238, 237, 237);
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+.Post-form .form input:hover {
+  background: rgb(221, 221, 221);
+}
+.Post-form .form input:focus {
+  background: rgb(221, 221, 221);
+}
+.Post-form .form textarea:hover {
+  background: rgb(221, 221, 221);
+}
+.Post-form .form textarea:focus {
+  background: rgb(221, 221, 221);
 }
 
-.App-link {
-  color: #61dafb;
+.Post-form .form textarea {
+  width: 100%;
+  height: auto;
+  font-size: 1rem;
+  margin: 10px;
+  padding: 10px;
+  background: rgb(238, 237, 237);
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+.Post-form .form .post_button {
+  width: 200px;
+  height: auto;
+  font-size: 1.5rem;
+  background: rgb(228, 228, 228);
+  border-radius: 5px;
+  border: none;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+  margin: 20px;
+  padding: 10px;
+  cursor: pointer;
+}
+.Post-form .form .update_button {
+  width: 200px;
+  height: auto;
+  font-size: 1.5rem;
+  background: rgb(228, 228, 228);
+  border-radius: 5px;
+  border: none;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+  margin: 20px;
+  padding: 10px;
+  cursor: pointer;
+}
+.Post-form .form .post_button:hover {
+  background: rgb(216, 216, 216);
+}
+.Post-form .form .update_button:hover {
+  background: rgb(216, 216, 216);
+}
+.all-post {
+  padding: 50px 10px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.post {
+  width: 100%;
+  height: auto;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px 0;
+  padding: 20px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+.post h2 {
+  width: 100%;
+  height: auto;
+  font-size: 1.5rem;
+  padding: 0 10px;
+  word-wrap: break-word;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+}
+.post p {
+  width: 100%;
+  height: auto;
+  font-size: 1rem;
+  padding: 10px;    
+  word-wrap: break-word;
+  margin-bottom: 20px;
+}
+.post .button-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  
+}
+.post .button-container .edit_button {
+  width: 100px;
+  height: auto;
+  font-size: 1.5rem;
+  background: rgb(91, 204, 125);
+  border-radius: 5px;
+  border: none;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+  padding: 10px;
+  cursor: pointer;
+}
+.post .button-container .delete_button {
+  width: 130px;
+  height: auto;
+  font-size: 1.5rem;
+  background: rgb(235, 131, 131);
+  border-radius: 5px;
+  border: none;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+  padding: 10px;
+  cursor: pointer;
+}
+.post .button-container .edit_button:hover {
+  background: rgb(94, 182, 113);
+}
+.post .button-container .delete_button:hover {
+  background: rgb(236, 114, 114);
 }
